@@ -1,9 +1,19 @@
+
+import { ThemeProvider } from "@mui/system";
+import { theme } from "./GlobalStyle";
+import { StyledButton } from "./style";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <header className="App-header">
+          <StyledButton color="secondary" variant="contained">
+            Botão
+          </StyledButton>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
